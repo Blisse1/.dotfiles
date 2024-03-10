@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+. "$HOME/.asdf/asdf.sh"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -115,7 +115,6 @@ fi
 # ------------
 # source "/home/bliss/.fzf/shell/key-bindings.zsh"
 
-eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -125,3 +124,4 @@ eval "$(zoxide init --cmd cd zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(zoxide init --cmd cd zsh)"
