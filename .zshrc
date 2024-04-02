@@ -6,6 +6,11 @@ export ZSH="$HOME/.oh-my-zsh"
 . "$HOME/.asdf/asdf.sh"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+# add to ~/.zshrc
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -125,3 +130,5 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(zoxide init --cmd cd zsh)"
+
+[ -f "/home/bliss/.ghcup/env" ] && . "/home/bliss/.ghcup/env" # ghcup-env
