@@ -132,3 +132,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(zoxide init --cmd cd zsh)"
 
 [ -f "/home/bliss/.ghcup/env" ] && . "/home/bliss/.ghcup/env" # ghcup-env
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
