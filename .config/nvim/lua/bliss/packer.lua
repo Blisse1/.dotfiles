@@ -14,11 +14,11 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-
     use('ThePrimeagen/harpoon')
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Recommended, not required.
+    -- If you are using Packer
+    use "folke/tokyonight.nvim"
 
     use({
         "kylechui/nvim-surround",
@@ -87,6 +87,14 @@ return require('packer').startup(function(use)
             
         }
     }
+    -- require("packer").startup(function()
+    --     use({
+    --         "stevearc/oil.nvim",
+    --         config = function()
+    --             require("oil").setup()
+    --         end,
+    --     })
+    -- end)
 end)
 
 

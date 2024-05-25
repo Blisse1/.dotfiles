@@ -218,7 +218,7 @@ bindsym $mod+Control+3 move container to workspace $ws3; workspace $ws3
 # bindsym $mod+Control+6 move container to workspace $ws6; workspace $ws6
 assign [class="discord"] $ws4
 
-exec_always google-chrome
-exec_always discord
-exec_always nitrogen --restore
+# exec_always google-chrome
+# exec_always discord
+# exec_always nitrogen --restore
 exec_always xrandr --output eDP --off --output HDMI-A-0 --primary --mode 1360x768 --pos 1366x0 --rotate normal   

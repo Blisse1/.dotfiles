@@ -4,22 +4,11 @@ general {
         interval = 5
 }
 
-order += "cpu_usage" 
-order += "disk /" 
 order += "battery 0"
+order += "disk /" 
 order += "memory"
 order += "tztime local"
-
-cpu_usage {
-    format = "all: %usage CPU_0: %cpu0 CPU_1: %cpu1"
-    max_threshold = 75
-    format_above_threshold = "Warning above threshold: %usage"
-}
  
-disk "/" {
-    format = "%avail"
-}
-
 battery 0 {
         format = "%status %percentage %remaining %emptytime"
         format_down = "No battery"
@@ -30,6 +19,11 @@ battery 0 {
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
 }
+
+disk "/" {
+    format = "%avail"
+}
+
 
 memory {
     format = "%used"

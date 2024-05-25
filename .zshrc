@@ -9,7 +9,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # add to ~/.zshrc
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
+export PATH="$PATH:$HOME/.local/lib/python3.11/site-packages/pipenv"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
