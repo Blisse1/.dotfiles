@@ -20,4 +20,5 @@ require("oil").setup({
       { "name", "asc" },
     },
   },
+  use_default_keymaps = false,
 })
