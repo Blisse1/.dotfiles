@@ -73,28 +73,7 @@ return require('packer').startup(function(use)
 
     use ("tpope/vim-obsession")
     -- Lua
-    use {
-        "folke/zen-mode.nvim",
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
-    }
-    use {
-        "folke/twilight.nvim",
-        opts = {
-            
-        }
-    }
-    -- require("packer").startup(function()
-    --     use({
-    --         "stevearc/oil.nvim",
-    --         config = function()
-    --             require("oil").setup()
-    --         end,
-    --     })
-    -- end)
+    use("stevearc/oil.nvim")
 end)
 
 
