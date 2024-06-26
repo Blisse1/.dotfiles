@@ -22,7 +22,6 @@ font pango:NanumGothic-Regular 12
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id picom --experimental-backends
 exec --no-startup-id redshift 
-exec --no-startup-id i3-battery-popup
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -52,10 +51,14 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h fullscreen disable, focus left fullscreen enable
+bindsym $mod+l fullscreen disable, focus right fullscreen enable
+bindsym $mod+j fullscreen disable, focus down fullscreen enable
+bindsym $mod+k fullscreen disable, focus up fullscreen enable
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 # bindsym $mod+Left focus left
