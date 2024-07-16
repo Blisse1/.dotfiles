@@ -225,3 +225,4 @@ assign [class="discord"] $ws4
 # exec_always discord
 # exec_always nitrogen --restore
 exec_always xrandr --output eDP --off --output HDMI-A-0 --primary --mode 1360x768 --pos 1366x0 --rotate normal   
+exec_always setxkbmap -option 'grp:alt_shift_toggle' -layout us,latam -variant ,
