@@ -6,7 +6,6 @@ end)
 
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
-  'tsserver',
   'eslint',
   'emmet_language_server',
   'rust_analyzer',

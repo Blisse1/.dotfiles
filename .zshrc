@@ -11,6 +11,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:$HOME/.local/lib/python3.11/site-packages/pipenv"
 
+export PATH="/usr/bin/pgsql:$PATH"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -78,6 +80,9 @@ fpath=(~/.zsh/completions $fpath)
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    zsh-autosuggestions
+)
 
 # User configuration
 
@@ -134,3 +139,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(mcfly init zsh)"
