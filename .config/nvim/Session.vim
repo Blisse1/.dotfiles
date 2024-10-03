@@ -17,14 +17,14 @@ badd +1 init.lua
 badd +1 ~/.dotfiles/.config/nvim/.gitignore
 badd +1 ~/.dotfiles/.config/nvim/Session.vim
 badd +42 after/plugin/oil.lua
-badd +10 after/plugin/harpoon.lua
-badd +2 lua/bliss/set.lua
-badd +39 lua/bliss/packer.lua
-badd +27 ~/.dotfiles/.config/nvim/lua/bliss/remap.lua
+badd +9 after/plugin/harpoon.lua
+badd +1 lua/bliss/set.lua
+badd +13 lua/bliss/packer.lua
+badd +1 ~/.dotfiles/.config/nvim/lua/bliss/remap.lua
 badd +9 after/plugin/lsp.lua
-badd +38 after/plugin/multicursor.lua
-badd +24 ~/.dotfiles/.config/nvim/after/plugin/lualine.lua
-badd +0 oil:///home/bliss/.dotfiles/.config/nvim/
+badd +26 after/plugin/multicursor.lua
+badd +36 ~/.dotfiles/.config/nvim/after/plugin/lualine.lua
+badd +1 oil:///home/bliss/.dotfiles/.config/nvim/
 badd +0 fugitive:///home/bliss/.dotfiles/.git//
 argglobal
 %argdel
@@ -49,7 +49,7 @@ set winwidth=1
 exe '1resize ' . ((&lines * 14 + 15) / 31)
 exe '2resize ' . ((&lines * 14 + 15) / 31)
 argglobal
-balt lua/bliss/packer.lua
+balt after/plugin/multicursor.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -66,11 +66,11 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/.dotfiles/.config/nvim/after/plugin/lualine.lua", ":p")) | buffer ~/.dotfiles/.config/nvim/after/plugin/lualine.lua | else | edit ~/.dotfiles/.config/nvim/after/plugin/lualine.lua | endif
+if bufexists(fnamemodify("lua/bliss/packer.lua", ":p")) | buffer lua/bliss/packer.lua | else | edit lua/bliss/packer.lua | endif
 if &buftype ==# 'terminal'
-  silent file ~/.dotfiles/.config/nvim/after/plugin/lualine.lua
+  silent file lua/bliss/packer.lua
 endif
-balt lua/bliss/packer.lua
+balt after/plugin/multicursor.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -81,12 +81,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 21 - ((6 * winheight(0) + 7) / 14)
+let s:l = 13 - ((6 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 21
-normal! 025|
+keepjumps 13
+normal! 031|
 wincmd w
 exe '1resize ' . ((&lines * 14 + 15) / 31)
 exe '2resize ' . ((&lines * 14 + 15) / 31)
