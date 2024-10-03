@@ -12,6 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 . "$HOME/.asdf/asdf.sh"
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # add to ~/.zshrc
 export BUN_INSTALL="$HOME/.bun"
