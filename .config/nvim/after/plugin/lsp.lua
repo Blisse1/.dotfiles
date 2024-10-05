@@ -6,9 +6,8 @@ end)
 
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
-  -- 'eslint',
+  'eslint',
   'emmet_language_server',
-  'rust_analyzer',
   'html',
   'tailwindcss',
   'htmx',

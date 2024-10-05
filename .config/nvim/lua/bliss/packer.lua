@@ -1,5 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 -- Only required if you have packer configured as `opt`
+
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -16,7 +17,7 @@ return require('packer').startup(function(use)
     -- If you are using Packer
     use "folke/tokyonight.nvim"
 
-    use({asd
+    use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
@@ -76,8 +77,15 @@ return require('packer').startup(function(use)
     -- Lua
     use("stevearc/oil.nvim")
 
+    use 'mfussenegger/nvim-lint'
+
+    use { 'mhartington/formatter.nvim' }
+
+    use { 'folke/trouble.nvim' }
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 end)
+
