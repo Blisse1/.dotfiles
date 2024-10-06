@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     -- If you are using Packer
     use "folke/tokyonight.nvim"
 
-    use({asd
+    use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()

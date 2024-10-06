@@ -25,51 +25,11 @@ badd +9 after/plugin/lsp.lua
 badd +26 after/plugin/multicursor.lua
 badd +36 ~/.dotfiles/.config/nvim/after/plugin/lualine.lua
 badd +1 oil:///home/bliss/.dotfiles/.config/nvim/
-badd +0 fugitive:///home/bliss/.dotfiles/.git//
 argglobal
 %argdel
 $argadd oil:///home/bliss/.dotfiles/.config/nvim/
-edit fugitive:///home/bliss/.dotfiles/.git//
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe '1resize ' . ((&lines * 14 + 15) / 31)
-exe '2resize ' . ((&lines * 14 + 15) / 31)
+edit lua/bliss/packer.lua
 argglobal
-balt after/plugin/multicursor.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 14)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-argglobal
-if bufexists(fnamemodify("lua/bliss/packer.lua", ":p")) | buffer lua/bliss/packer.lua | else | edit lua/bliss/packer.lua | endif
-if &buftype ==# 'terminal'
-  silent file lua/bliss/packer.lua
-endif
 balt after/plugin/multicursor.lua
 setlocal fdm=manual
 setlocal fde=0
@@ -81,15 +41,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 13 - ((6 * winheight(0) + 7) / 14)
+let s:l = 3 - ((2 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
-normal! 031|
-wincmd w
-exe '1resize ' . ((&lines * 14 + 15) / 31)
-exe '2resize ' . ((&lines * 14 + 15) / 31)
+keepjumps 3
+normal! 05|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -97,8 +54,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
