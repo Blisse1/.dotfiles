@@ -11,6 +11,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })   
 vim.keymap.set("n", "<leader>gs", "<CMD>Git<CR>", { desc = "Vim Fugitive" })   
+vim.keymap.set("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Undo Tree" })   
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
