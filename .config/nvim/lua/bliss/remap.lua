@@ -13,6 +13,10 @@ vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent director
 vim.keymap.set("n", "<leader>gs", "<CMD>Git<CR>", { desc = "Vim Fugitive" })   
 vim.keymap.set("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Undo Tree" })   
 
+vim.keymap.set("n", "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>", { desc = "" })   
+vim.keymap.set("n", "<leader>xX", "<CMD>Trouble symbols toggle focus=false<CR>", { desc = "" })   
+vim.keymap.set("n", "<leader>cs", "<CMD>Trouble lsp toggle focus=false win.position=right<CR>", { desc = "" })   
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 

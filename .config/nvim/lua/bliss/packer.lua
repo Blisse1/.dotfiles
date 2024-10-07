@@ -79,6 +79,15 @@ return require('packer').startup(function(use)
     use ("tpope/vim-obsession")
 
     use("stevearc/oil.nvim")
+    use{
+        "folke/trouble.nvim",
+        opts = {},
+        config = function()
+            require("trouble").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    }
 
     use {
         'nvim-lualine/lualine.nvim',
