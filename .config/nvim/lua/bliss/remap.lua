@@ -10,6 +10,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })   
+vim.keymap.set("n", "<leader>gs", "<CMD>Git<CR>", { desc = "Vim Fugitive" })   
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])

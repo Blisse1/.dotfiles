@@ -10,10 +10,14 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use('ThePrimeagen/harpoon')
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Recommended, not required.
-    -- If you are using Packer
+
     use "folke/tokyonight.nvim"
 
     use({
@@ -73,7 +77,7 @@ return require('packer').startup(function(use)
     }
 
     use ("tpope/vim-obsession")
-    -- Lua
+
     use("stevearc/oil.nvim")
 
     use {
