@@ -3,7 +3,11 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    -- Importante siempre hacerle un require
     use 'wbthomason/packer.nvim'
+
+    use 'nvim-tree/nvim-web-devicons'
+    -- Hace falta instalar una nerdfont para que funcione
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -91,6 +95,5 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 end)

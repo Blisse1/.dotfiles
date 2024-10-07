@@ -140,12 +140,6 @@ _G.packer_plugins = {
     path = "/home/bliss/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/bliss/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
   ["oil.nvim"] = {
     loaded = true,
     path = "/home/bliss/.local/share/nvim/site/pack/packer/start/oil.nvim",
