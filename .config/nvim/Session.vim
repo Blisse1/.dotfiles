@@ -24,14 +24,13 @@ badd +13 ~/.dotfiles/.config/nvim/lua/bliss/remap.lua
 badd +1 after/plugin/lsp.lua
 badd +1 after/plugin/multicursor.lua
 badd +36 ~/.dotfiles/.config/nvim/after/plugin/lualine.lua
-badd +1 oil:///home/bliss/.dotfiles/.config/nvim/
 badd +1 ~/.dotfiles/.config/nvim/after/plugin/trouble.lua
 badd +4 after/plugin/telescope.lua
 badd +226 plugin/packer_compiled.lua
 argglobal
 %argdel
 $argadd oil:///home/bliss/.dotfiles/.config/nvim/
-edit ~/.dotfiles/.config/nvim/lua/bliss/remap.lua
+edit after/plugin/harpoon.lua
 argglobal
 balt lua/bliss/packer.lua
 setlocal fdm=manual
@@ -44,12 +43,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 13 - ((12 * winheight(0) + 14) / 29)
+let s:l = 22 - ((15 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
-normal! 072|
+keepjumps 22
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
