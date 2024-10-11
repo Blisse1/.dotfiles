@@ -17,7 +17,7 @@ badd +1 init.lua
 badd +1 ~/.dotfiles/.config/nvim/.gitignore
 badd +1 ~/.dotfiles/.config/nvim/Session.vim
 badd +42 after/plugin/oil.lua
-badd +37 after/plugin/harpoon.lua
+badd +4 after/plugin/harpoon.lua
 badd +1 lua/bliss/set.lua
 badd +81 lua/bliss/packer.lua
 badd +13 ~/.dotfiles/.config/nvim/lua/bliss/remap.lua
@@ -28,52 +28,13 @@ badd +1 ~/.dotfiles/.config/nvim/after/plugin/trouble.lua
 badd +4 after/plugin/telescope.lua
 badd +226 plugin/packer_compiled.lua
 badd +1 oil:///home/bliss/.dotfiles/.config/nvim/
-badd +0 fugitive:///home/bliss/.dotfiles/.git//
+badd +5 ~/.dotfiles/.config/nvim/after/plugin/colorscheme.lua
 argglobal
 %argdel
 $argadd oil:///home/bliss/.dotfiles/.config/nvim/
-edit fugitive:///home/bliss/.dotfiles/.git//
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 15 + 16) / 33)
+edit ~/.dotfiles/.config/nvim/after/plugin/colorscheme.lua
 argglobal
-balt lua/bliss/packer.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-argglobal
-if bufexists(fnamemodify("after/plugin/harpoon.lua", ":p")) | buffer after/plugin/harpoon.lua | else | edit after/plugin/harpoon.lua | endif
-if &buftype ==# 'terminal'
-  silent file after/plugin/harpoon.lua
-endif
-balt lua/bliss/packer.lua
+balt after/plugin/harpoon.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -84,15 +45,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((7 * winheight(0) + 7) / 15)
+let s:l = 5 - ((4 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
+keepjumps 5
 normal! 0
-wincmd w
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 15 + 16) / 33)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -100,8 +58,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
