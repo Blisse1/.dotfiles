@@ -186,11 +186,6 @@ _G.packer_plugins = {
     path = "/home/bliss/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-obsession"] = {
-    loaded = true,
-    path = "/home/bliss/.local/share/nvim/site/pack/packer/start/vim-obsession",
-    url = "https://github.com/tpope/vim-obsession"
-  },
   ["vim-textobj-entire"] = {
     loaded = true,
     path = "/home/bliss/.local/share/nvim/site/pack/packer/start/vim-textobj-entire",
