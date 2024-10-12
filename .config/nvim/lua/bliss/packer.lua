@@ -80,8 +80,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use ("tpope/vim-obsession")
-
     use("stevearc/oil.nvim")
     use{
         "folke/trouble.nvim",
