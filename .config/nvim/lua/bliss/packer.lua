@@ -92,8 +92,4 @@ return require('packer').startup(function(use)
             })
         end
     }
-
-    use {
-        'nvim-lualine/lualine.nvim',
-    }
 end)
