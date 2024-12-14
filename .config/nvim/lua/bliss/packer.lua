@@ -38,32 +38,6 @@ return require('packer').startup(function(use)
 
     use ('tpope/vim-fugitive')
 
-    use({
-        "jake-stewart/multicursor.nvim",
-        branch = "1.0",
-    })
-
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- (Autocompletion)
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
-        }
-    }
-
     use ('tpope/vim-commentary')
 
     use ('kana/vim-textobj-user')
@@ -85,5 +59,15 @@ return require('packer').startup(function(use)
             })
         end
     }
+
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        "L3MON4D3/LuaSnip",
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp"
+    }
+
     use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)
