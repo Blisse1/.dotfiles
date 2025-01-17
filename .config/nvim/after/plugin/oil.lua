@@ -38,5 +38,5 @@ require("oil").setup({
     ["g."] = false,
     ["g\\"] = false,
   },
-  use_default_keymaps = false,
+  use_default_keymaps = false
 })

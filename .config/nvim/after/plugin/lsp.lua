@@ -40,7 +40,7 @@ require('lspconfig').rust_analyzer.setup {
   capabilities = capabilities,
   ...  -- other lspconfig configs
 }
-require('lspconfig').lua_ls.setup {
+require('lspconfig').astro.setup {
   capabilities = capabilities,
   ...  -- other lspconfig configs
 }

@@ -4,9 +4,9 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     -- Importante siempre hacerle un require
-    use 'wbthomason/packer.nvim'
+    use ('wbthomason/packer.nvim')
 
-    use 'nvim-tree/nvim-web-devicons'
+    use ('nvim-tree/nvim-web-devicons')
     -- Hace falta instalar una nerdfont para que funcione
 
     use {
@@ -22,43 +22,32 @@ return require('packer').startup(function(use)
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Recommended, not required.
 
-    use "folke/tokyonight.nvim"
+    use ("folke/tokyonight.nvim")
 
     use({
         "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        tag = "*",
         config = function()
             require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
             })
         end
     })
+    
+    use ("mbbill/undotree")
 
-    use ('mbbill/undotree')
+    use ("tpope/vim-fugitive")
 
-    use ('tpope/vim-fugitive')
+    use ("tpope/vim-commentary")
 
-    use ('tpope/vim-commentary')
+    use ("kana/vim-textobj-user")
 
-    use ('kana/vim-textobj-user')
+    use ("kana/vim-textobj-entire")
 
-    use ('kana/vim-textobj-entire')
+    use ("stevearc/oil.nvim")
 
-    use {
-        'lukas-reineke/indent-blankline.nvim',
-    }
+    use ("folke/trouble.nvim")
 
-    use("stevearc/oil.nvim")
-
-    use{
-        "folke/trouble.nvim",
-        opts = {},
-        config = function()
-            require("trouble").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    }
+    use ("shellRaining/hlchunk.nvim")
 
     use {
         "williamboman/mason.nvim",
@@ -69,5 +58,11 @@ return require('packer').startup(function(use)
         "hrsh7th/cmp-nvim-lsp"
     }
 
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use({
+        'Wansmer/treesj',
+        requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+    })
+
+    use 'jinh0/eyeliner.nvim'
+
 end)
