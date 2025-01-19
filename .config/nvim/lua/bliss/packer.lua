@@ -6,8 +6,8 @@ return require('packer').startup(function(use)
     -- Importante siempre hacerle un require
     use ('wbthomason/packer.nvim')
 
-    use ('nvim-tree/nvim-web-devicons')
     -- Hace falta instalar una nerdfont para que funcione
+    use ('nvim-tree/nvim-web-devicons')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -64,5 +64,4 @@ return require('packer').startup(function(use)
     })
 
     use 'jinh0/eyeliner.nvim'
-
 end)
