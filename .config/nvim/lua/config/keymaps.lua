@@ -9,14 +9,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>gs", "<CMD>Git<CR>", { desc = "Vim Fugitive" })
-vim.keymap.set("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Undo Tree" })
-
-vim.keymap.set("n", "<leader>td", "<CMD>Trouble diagnostics toggle<CR>", { desc = "" })
-vim.keymap.set("n", "<leader>ts", "<cmd>Trouble symbols toggle<cr>", { desc = "" })
-vim.keymap.set("n", "<leader>tl", "<CMD>Trouble lsp toggle<CR>", { desc = "" })
-vim.keymap.set("n", "<leader>tq", "<CMD>Trouble qflist toggle<CR>", { desc = "" })
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
