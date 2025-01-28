@@ -24,7 +24,11 @@ return {
             ["gx"] = false,
             ["g."] = false,
             ["g\\"] = false,
-        }
+        },
+        view_options = {
+            -- Show files and directories that start with "."
+            show_hidden = true,
+        },
     },
     keys = {{ "<leader>pv", "<cmd>Oil<cr>" }},
     -- Optional dependencies
